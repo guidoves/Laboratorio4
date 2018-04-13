@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MostrarDatosComponent implements OnInit {
 
-  @Input() dato: any[] = [];
+  @Input() dato: any[];
 
   constructor() { }
 

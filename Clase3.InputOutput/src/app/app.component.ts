@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Persona } from './clases/persona';
 
 @Component({
   selector: 'app-root',
@@ -6,11 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  nombres:string[] = [];
+  
+  personas:Persona[] = new Array();
 
-  saludo(dato:string){
-    this.nombres.push(dato);
-    console.log(this.nombres);
+  saludo(dato:Persona){
+    this.personas.push(dato);
+    console.log(this.personas);
   }
   
 }

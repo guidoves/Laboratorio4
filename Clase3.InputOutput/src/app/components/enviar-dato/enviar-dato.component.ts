@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { Persona } from '../../clases/persona';
 
 
 @Component({
@@ -9,16 +10,19 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 export class EnviarDatoComponent implements OnInit {
 
   @Output() enviarDato: EventEmitter<any> = new EventEmitter();
-  nombre:string;
+  persona:Persona;
 
-  constructor() { }
+  constructor() {
+      this.persona = new Persona();
+   }
 
   ngOnInit() {
   }
-
+  
   enviar(){
     //alert("Hola EnviarDatos");
-    this.enviarDato.emit(this.nombre);
+    let enviarPersona:Persona = new Persona(this.persona.nombre,this.persona.apellido,this.persona.edad)
+    this.enviarDato.emit(enviarPersona);
   }
-
+  
 }

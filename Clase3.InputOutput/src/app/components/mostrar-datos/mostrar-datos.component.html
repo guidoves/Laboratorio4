@@ -7,10 +7,14 @@
   <table class="table">
     <thead>
       <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Edad</th>
     </thead>
     <tbody>
-      <tr *ngFor="let nombre of dato">
-        <td>{{nombre}}</td>
+      <tr *ngFor="let persona of dato">
+        <td>{{persona.nombre}}</td>
+        <td>{{persona.apellido}}</td>
+        <td>{{persona.edad}}</td>
       </tr>
     </tbody>
   </table>
