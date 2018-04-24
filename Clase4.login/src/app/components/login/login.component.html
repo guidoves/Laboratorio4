@@ -1,0 +1,16 @@
+<div class="container login-component">
+  <div>
+    <h1>Login</h1>
+  </div>
+  <div>
+    <label>Usuario</label>
+    <input class="form-control" name="usuario" [(ngModel)]="userInput" type="text" placeholder="Usuario">
+  </div>
+  <div>
+    <label>Constraseña</label>
+    <input class="form-control" name="clave" [(ngModel)]="passInput" type="password" placeholder="Constraseña">
+  </div>
+  <div>
+    <button (click)="validar()" class="btn btn-block btn-primary">Enviar</button>
+  </div>
+</div>
